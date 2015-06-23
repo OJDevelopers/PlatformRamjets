@@ -1,0 +1,122 @@
+
+<div class="login-container">
+
+	<div class="row">
+
+		<div class="col-sm-6">
+
+			<script type="text/javascript">
+				jQuery(document).ready(function($)
+				{
+					OAuth.initialize('IODyYXD8LwrNmYmVFHy78_ABEAs');
+					// Reveal Login form
+					setTimeout(function(){ $(".fade-in-effect").addClass('in'); }, 1);
+
+
+					// Validation and Ajax action
+					$("form#login").validate({
+						rules: {
+							username: {
+								required: true
+							},
+
+							passwd: {
+								required: true
+							}
+						},
+
+						messages: {
+							username: {
+								required: 'Por favor ingresa tu usuario.'
+							},
+
+							passwd: {
+								required: 'Por favor ingresa tu contraseña.'
+							}
+						},
+
+						// Form Processing via AJAX
+						submitHandler: function(form)
+						{
+							showLoadingBar(70); // Fill progress bar to 70% (just a given value)
+
+							var opts = {
+								"closeButton": true,
+								"debug": false,
+								"positionClass": "toast-top-full-width",
+								"onclick": null,
+								"showDuration": "300",
+								"hideDuration": "1000",
+								"timeOut": "5000",
+								"extendedTimeOut": "1000",
+								"showEasing": "swing",
+								"hideEasing": "linear",
+								"showMethod": "fadeIn",
+								"hideMethod": "fadeOut"
+							};
+
+							LogIn(opts);
+							
+
+						}
+					});
+
+					// Set Form focus
+					$("form#login .form-group:has(.form-control):first .form-control").focus();
+				});
+			</script>
+
+			<!-- Errors container -->
+			<div class="errors-container">
+
+				
+			</div>
+
+			<!-- Add class "fade-in-effect" for login form effect -->
+			<form method="post" role="form" id="login" class="login-form fade-in-effect">
+
+				<div class="login-header">
+					<a href="#/app/dashboard-variant-1" class="logo">
+						<img src="assets/images/logo@2x.png" alt="" width="80" />
+						<span>Iniciar Sesión</span>
+					</a>
+
+					<p>Querido usuario, por favor logeate con tu cuenta de gmail con la cual administras tu canal.</p>
+				</div>
+
+
+				<!--<div class="form-group">
+					<label class="control-label" for="username">Username</label>
+					<input type="text" class="form-control input-dark" name="username" id="username" autocomplete="off" />
+				</div>
+
+				<div class="form-group">
+					<label class="control-label" for="passwd">Password</label>
+					<input type="password" class="form-control input-dark" name="passwd" id="passwd" autocomplete="off" />
+				</div>-->
+
+				<div class="form-group">
+					<button type="submit" class="btn btn-dark  btn-block text-left gplus">
+						<i class="fa-google-plus"></i>
+						Google
+					</button>
+				</div>
+
+				<div class="login-footer">
+					<a href="">Olvidaste tu contraseña?</a>
+
+					<div class="info-links">
+						<a href="">Ramjets</a> -
+						<a href="">Privacy Policy</a>
+					</div>
+                    <div class="info-links">
+                        Develop by -
+                        <a href="">OJDevelopers</a>
+                    </div>
+				</div>
+			</form>
+		</div>
+
+	</div>
+
+</div>
