@@ -65,51 +65,51 @@ app.config(function($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, ASS
 				},
 			}
 		}).
-		state('app.dashboard-variant-2', {
-			url: '/dashboard-variant-2',
-			templateUrl: appHelper.templatePath('dashboards/variant-2'),
-			resolve: {
-				resources: function($ocLazyLoad){
-					return $ocLazyLoad.load([
-						ASSETS.charts.dxGlobalize,
-					]);
-				},
-				dxCharts: function($ocLazyLoad){
-					return $ocLazyLoad.load([
-						ASSETS.charts.dxCharts,
-					]);
-				},
-			}
-		}).
-		state('app.dashboard-variant-3', {
-			url: '/dashboard-variant-3',
-			templateUrl: appHelper.templatePath('dashboards/variant-3'),
-			resolve: {
-				resources: function($ocLazyLoad){
-					return $ocLazyLoad.load([
-						ASSETS.charts.dxGlobalize,
-						ASSETS.maps.vectorMaps,
-					]);
-				},
-				dxCharts: function($ocLazyLoad){
-					return $ocLazyLoad.load([
-						ASSETS.charts.dxCharts,
-					]);
-				},
-			}
-		}).
-		state('app.dashboard-variant-4', {
-			url: '/dashboard-variant-4',
-			templateUrl: appHelper.templatePath('dashboards/variant-4'),
-			resolve: {
-				resources: function($ocLazyLoad){
-					return $ocLazyLoad.load([
-						ASSETS.icons.meteocons,
-						ASSETS.maps.vectorMaps,
-					]);
-				}
-			}
-		}).
+		//state('app.dashboard-variant-2', {
+		//	url: '/dashboard-variant-2',
+		//	templateUrl: appHelper.templatePath('dashboards/variant-2'),
+		//	resolve: {
+		//		resources: function($ocLazyLoad){
+		//			return $ocLazyLoad.load([
+		//				ASSETS.charts.dxGlobalize,
+		//			]);
+		//		},
+		//		dxCharts: function($ocLazyLoad){
+		//			return $ocLazyLoad.load([
+		//				ASSETS.charts.dxCharts,
+		//			]);
+		//		},
+		//	}
+		//}).
+		//state('app.dashboard-variant-3', {
+		//	url: '/dashboard-variant-3',
+		//	templateUrl: appHelper.templatePath('dashboards/variant-3'),
+		//	resolve: {
+		//		resources: function($ocLazyLoad){
+		//			return $ocLazyLoad.load([
+		//				ASSETS.charts.dxGlobalize,
+		//				ASSETS.maps.vectorMaps,
+		//			]);
+		//		},
+		//		dxCharts: function($ocLazyLoad){
+		//			return $ocLazyLoad.load([
+		//				ASSETS.charts.dxCharts,
+		//			]);
+		//		},
+		//	}
+		//}).
+		//state('app.dashboard-variant-4', {
+		//	url: '/dashboard-variant-4',
+		//	templateUrl: appHelper.templatePath('dashboards/variant-4'),
+		//	resolve: {
+		//		resources: function($ocLazyLoad){
+		//			return $ocLazyLoad.load([
+		//				ASSETS.icons.meteocons,
+		//				ASSETS.maps.vectorMaps,
+		//			]);
+		//		}
+		//	}
+		//}).
 
 		// Update Highlights
 		state('app.update-highlights', {
